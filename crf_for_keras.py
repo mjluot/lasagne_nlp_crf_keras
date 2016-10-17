@@ -97,16 +97,16 @@ def crf_loss(targets, energies):
     #print dir(targets_shuffled)
 
 
-    print T.arange(energy_time0.shape[0]), init_label, target_time0
+    #print T.arange(energy_time0.shape[0]), init_label, target_time0
 
 
     initials = [energies_shuffled[0, :, -1, :], target_time0,
                 energy_time0[T.arange(energy_time0.shape[0]), init_label, target_time0]]
 
-    print 'Before scan'
-    print 'initials', initials
+    #print 'Before scan'
+    #print 'initials', initials
     #initials = [T.cast(X, 'int32') for X in initials]
-    print initials
+    #print initials
     #energies_shuffled = T.cast(energies_shuffled, 'int32')
     targets_shuffled = T.cast(targets_shuffled, 'int32')
 
@@ -171,9 +171,9 @@ class CRFLayer(Layer):
 
     def build(self, input_shape):
 
-        print input_shape
+        #print input_shape
         num_inputs = input_shape[2]
-        print num_inputs
+        #print num_inputs
         #print input_shape
         #self.input_shape = input_shape
 
