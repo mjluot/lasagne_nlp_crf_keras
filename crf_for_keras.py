@@ -56,8 +56,6 @@ def crf_loss(targets, energies):
     #targets = targets[-1][-1]
     #print energies.eval().shape
 
-    print energies
-    print targets
 
     assert energies.ndim == 4
     assert targets.ndim == 2
